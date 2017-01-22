@@ -1,4 +1,4 @@
-docker-service-deploy
+docker-service-deploy [![Build Status](https://travis-ci.org/kiview/ansible-role-docker-service-deploy.svg?branch=master)](https://travis-ci.org/kiview/ansible-role-docker-service-deploy)
 =========
 
 Deploys a docker service by copying a docker-compose.yml file and needed external file dependencies onto the host.
