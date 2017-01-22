@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    pip_version_docker_py: '1.10.6'
+    pip_version_docker_compose: '1.9.0'
+  roles:
+    - name: docker-service-deploy wiht default values
+      role: docker-service-deploy

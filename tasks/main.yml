@@ -1,0 +1,19 @@
+---
+# tasks file for docker compose
+  
+- name: create project directory {{ docker_service_deploy_project_dir }}
+  file: path={{ docker_service_deploy_project_dir }} state=directory
+
+- name: copy docker-compose to host
+  copy: src={{docker_service_deploy_src}} dest={{ docker_service_deploy_project_dir }}
+
+- name: Copy additional files
+  copy: src={{ item }} dest={{ docker_service_deploy_project_dir }}
+  with_items: "{{ docker_service_deploy_additional_files }}"
+
+- name: start project
+  docker_service:
+    project_src: "{{ docker_service_deploy_project_dir }}"
+    pull: "{{ docker_service_deploy_pull }}"
+    state: present
+    restarted: yes
