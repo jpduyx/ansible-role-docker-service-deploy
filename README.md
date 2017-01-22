@@ -30,13 +30,13 @@ Example Playbook
   become: true
   roles:
     - role: docker-service-deploy
-      project_dir: /docker/gitlab
-      additional_files:
+      docker_service_deploy_project_dir: /docker/gitlab
+      docker_service_deploy_additional_files:
         - config.toml
 
     - role: docker-service-deploy
-      docker_compose_src: artifactory-docker-compose.yml
-      project_dir: /docker/artifactory
+      docker_service_deploy_src: artifactory-docker-compose.yml
+      docker_service_deploy_project_dir: /docker/artifactory
 ```
 License
 -------
