@@ -1,6 +1,6 @@
 galaxy_info:
   author: Kevin Wittek
-  description: Ansible role for using the _docker_service_ module with docker-compose.yml files on the remote host.
+  description: Ansible role for using the docker_service module with docker-compose.yml files on the remote host.
   company: Styracosoft GbR
 
   license: Apache v2.0
